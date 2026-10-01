@@ -1,0 +1,30 @@
+# Outlook / Microsoft 365 setup: see OUTLOOK_AND_NEW_USER_SETUP.md
+[email]
+provider = "outlook"
+own_addresses = []
+display_name = ""
+signature = ""
+
+[microsoft]
+# Application (client) ID from Microsoft Entra App registrations.
+client_id = ""
+tenant_id = "common"
+token_path = ".autofollow/outlook-token-cache.json"
+
+[storage]
+database_path = ".autofollow/outlook.sqlite3"
+
+[followup]
+default_delay_days = 5
+default_max_followups = 1
+default_template_path = "templates/followup.txt"
+
+[inbox]
+timezone = "UTC"
+initial_lookback_days = 30
+
+[llm]
+provider = "auto"
+openai_model = "gpt-4.1-mini"
+model = "qwen3.5:9b"
+host = "http://localhost:11434"

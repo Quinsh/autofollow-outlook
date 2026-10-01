@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local secrets and app state
+credentials.json
+.autofollow/
+config.toml
+*.sqlite3
+*.db
+
+# macOS
+.DS_Store

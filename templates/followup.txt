@@ -1,0 +1,6 @@
+Hi {name},
+
+Just wanted to follow up on my previous email below.
+
+Best,
+{sender_name}

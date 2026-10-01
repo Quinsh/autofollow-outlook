@@ -1,0 +1,31 @@
+[google]
+credentials_path = "credentials.json"
+token_path = ".autofollow/token.json"
+scopes = [
+  "https://www.googleapis.com/auth/gmail.send",
+  "https://www.googleapis.com/auth/gmail.readonly"
+]
+
+[storage]
+database_path = ".autofollow/autofollow.sqlite3"
+
+[followup]
+default_delay_days = 5
+default_max_followups = 1
+default_template_path = "templates/followup.txt"
+
+[email]
+own_addresses = []
+
+[inbox]
+# Used for daily views and relative deadlines.
+timezone = "UTC"
+initial_lookback_days = 30
+
+[llm]
+# auto: OpenAI when OPENAI_API_KEY is set; otherwise local Ollama.
+# Set to "openai" or "ollama" to force a provider. Never put the API key here.
+provider = "auto"
+openai_model = "gpt-4.1-mini"
+model = "qwen3.5:9b"
+host = "http://localhost:11434"

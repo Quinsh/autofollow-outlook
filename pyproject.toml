@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autofollow"
+version = "0.1.0"
+description = "Local Gmail and Outlook CLI for tracked outbound emails and automatic follow-ups."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Autofollow" }]
+dependencies = [
+    "google-api-python-client>=2.120.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.0",
+    "rich>=15.0.0",
+    "msal>=1.31,<2",
+    "filelock>=3.16,<4",
+    "requests>=2.32,<3"
+]
+
+[project.scripts]
+autofollow = "autofollow.app:main"
+
+[tool.setuptools]
+packages = ["autofollow"]
